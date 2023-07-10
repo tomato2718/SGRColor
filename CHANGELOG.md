@@ -1,4 +1,13 @@
 # Change Log
+## v1.0.0 (2023/07/10)
+### Features and enhancements
+- **Feat:** Create main module. [@tomato2718]
+- **Docs:** Create documents. [@tomato2718]
+- **Tests:** Create unit tests. [@tomato2718]
+- **Chore:** Update project information. [@tomato2718]
+
+### Bug fixes
+
 ## v0.0.0 (1900/01/01)
 ### Features and enhancements
 
