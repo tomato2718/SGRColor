@@ -1,8 +1,8 @@
 from setuptools import setup, find_namespace_packages
 
-from template import __about__
+from sgrcolor import __about__
 
-with open('./template/requirements.txt', 'r') as file:
+with open('./sgrcolor/requirements.txt', 'r') as file:
     req = file.readlines()
 
 setup(
@@ -11,7 +11,7 @@ setup(
     author = __about__.__author__,
     maintainer = __about__.__maintainer__,
     description = __about__.__summary__,
-    packages = find_namespace_packages(include=['template*']),
+    packages = find_namespace_packages(include=['sgrcolor*']),
     include_package_data = True,
     install_requires=req,
 )
