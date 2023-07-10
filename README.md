@@ -27,13 +27,13 @@ from sgrcolor import (
     Font,
     FG,
     BG,
-    SGRColor
+    SGRColor,
 )
 print(FG.BLUE, 'foobar', FG.RESET)
 font1 = SGRColor(
-    font = 'bold',
-    fg = 'black',
-    bg = 'white',
+    font='bold',
+    fg='black',
+    bg='white',
 )
 print(font1('barfoo'))
 ```
