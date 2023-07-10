@@ -16,6 +16,14 @@ from ._base import (
 class SGRColor:
     '''
     Generate an object to format input string.
+
+    Usage::
+
+        >>> important = SGRColor(
+                font=('bold', 'italic'),
+                fg='yellow',
+            )
+        >>> print(important('Something IMPORTANT.'))
     '''
     _prefix: str
 

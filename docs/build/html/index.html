@@ -194,8 +194,8 @@
           </label>
         </div>
         <article role="main">
-          <section id="welcome-to-template-s-documentation">
-<h1>Welcome to template’s documentation!<a class="headerlink" href="#welcome-to-template-s-documentation" title="Permalink to this heading">#</a></h1>
+          <section id="select-graphic-rendition-color">
+<h1>Select Graphic Rendition Color<a class="headerlink" href="#select-graphic-rendition-color" title="Permalink to this heading">#</a></h1>
 <section id="contents">
 <h2>Contents<a class="headerlink" href="#contents" title="Permalink to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
@@ -207,6 +207,87 @@
 </li>
 </ul>
 </div>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
+<p>SGRColor module let you color your output with Select Graphic Rendition Code.</p>
+<p><img alt="example" src="_images/example.png" /></p>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">#</a></h2>
+<section id="system">
+<h3>System<a class="headerlink" href="#system" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">&gt;=</span> <span class="pre">3.10.10</span></code></p></li>
+</ul>
+</section>
+<section id="python">
+<h3>Python<a class="headerlink" href="#python" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Nothing</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h2>
+<section id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Install with Python pip</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt;<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>sgrcolor-1.0.0-py3-none-any.whl
+</pre></div>
+</div>
+</section>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h2>
+<section id="start-up">
+<h3>Start Up<a class="headerlink" href="#start-up" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Import this Project as a module.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sgrcolor</span> <span class="kn">import</span> <span class="p">(</span>
+   <span class="n">Reset</span><span class="p">,</span>
+   <span class="n">Font</span><span class="p">,</span>
+   <span class="n">FG</span><span class="p">,</span>
+   <span class="n">BG</span><span class="p">,</span>
+   <span class="n">SGRColor</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">FG</span><span class="o">.</span><span class="n">BLUE</span><span class="p">,</span> <span class="s1">&#39;foobar&#39;</span><span class="p">,</span> <span class="n">FG</span><span class="o">.</span><span class="n">RESET</span><span class="p">)</span>
+<span class="n">font1</span> <span class="o">=</span> <span class="n">SGRColor</span><span class="p">(</span>
+   <span class="n">font</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span>
+   <span class="n">fg</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
+   <span class="n">bg</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">font1</span><span class="p">(</span><span class="s1">&#39;barfoo&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="run-the-tests">
+<h2>Run the tests<a class="headerlink" href="#run-the-tests" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Unit tests</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt;<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>tests
+</pre></div>
+</div>
+</section>
+<section id="support">
+<h2>Support<a class="headerlink" href="#support" title="Permalink to this heading">#</a></h2>
+<section id="author">
+<h3>Author<a class="headerlink" href="#author" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">yveschen2718&#64;gmail.com</span></code></p></li>
+</ul>
+</section>
+<section id="maintainer">
+<h3>Maintainer<a class="headerlink" href="#maintainer" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">yveschen2718&#64;gmail.com</span></code></p></li>
+</ul>
+</section>
 </section>
 </section>
 
@@ -255,8 +336,28 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Welcome to template’s documentation!</a><ul>
+<li><a class="reference internal" href="#">Select Graphic Rendition Color</a><ul>
 <li><a class="reference internal" href="#contents">Contents</a></li>
+<li><a class="reference internal" href="#summary">Summary</a></li>
+<li><a class="reference internal" href="#requirements">Requirements</a><ul>
+<li><a class="reference internal" href="#system">System</a></li>
+<li><a class="reference internal" href="#python">Python</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#setup">Setup</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage">Usage</a><ul>
+<li><a class="reference internal" href="#start-up">Start Up</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#run-the-tests">Run the tests</a></li>
+<li><a class="reference internal" href="#support">Support</a><ul>
+<li><a class="reference internal" href="#author">Author</a></li>
+<li><a class="reference internal" href="#maintainer">Maintainer</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
