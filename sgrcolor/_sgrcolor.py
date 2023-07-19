@@ -92,5 +92,5 @@ class SGRColor:
         '''
 
         if not isinstance(text, str):
-            raise TypeError('Type of string MUSR be str.')
+            raise TypeError('Type of text MUST be str.')
         return self._prefix + text + Reset.ALL
