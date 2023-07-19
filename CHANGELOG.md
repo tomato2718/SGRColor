@@ -1,4 +1,9 @@
 # Change Log
+## v1.0.1 (2023/07/19)
+### Features and enhancements
+- **Style:** Fix some typo. [@tomato2718]
+
+
 ## v1.0.0 (2023/07/10)
 ### Features and enhancements
 - **Feat:** Create main module. [@tomato2718]

@@ -13,10 +13,10 @@ __all__ = [
 ]
 
 __project__ = 'sgrcolor'
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 __author__ = 'yveschen2718@gmail.com'
 __maintainer__ = 'yveschen2718@gmail.com'
-__release__ = '2023/07/10'
+__release__ = '2023/07/19'
 __summary__ = 'Color your output with Select Graphic Rendition Code.'
 __usage__ = f'''
 Usage:
