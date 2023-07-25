@@ -1,4 +1,8 @@
 # Change Log
+## v1.0.2 (2023/07/23)
+### Features and enhancements
+- **Style:** Change the code style of `_base.py`. [@tomato2718]
+
 ## v1.0.1 (2023/07/19)
 ### Features and enhancements
 - **Style:** Fix some typo. [@tomato2718]
