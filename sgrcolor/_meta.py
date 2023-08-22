@@ -15,7 +15,7 @@ class SGRMeta(type):
     def __getattribute__(self, __name: str) -> Any:
         res = object.__getattribute__(self, __name)
         if isinstance(res, str) and __name.isupper():
-            res = '\033[' + res + 'm'
+            res = f'\033[{res}m'
         return res
 
     def getvalue(self, __name: str) -> str:
