@@ -1,4 +1,17 @@
 # Change Log
+## v2.0.0 (2023/07/23)
+### Breaking changes
+- **Modify:** Change `SGRColor()` class to accept only specific argument. [@tomato2718]
+
+### Features and enhancements
+- **Feat:** Add `types` module. [@tomato2718]
+- **Refactor:** Improve code performance. [@tomato2718]
+- **Docs:** Update documents. [@tomato2718]
+- **Chore:** Update project information. [@tomato2718]
+
+### Bug fixes
+- **Fix:** Fix incorrect `__all__` member in `_base.py`.
+
 ## v1.0.2 (2023/07/23)
 ### Features and enhancements
 - **Style:** Change the code style of `_base.py`. [@tomato2718]

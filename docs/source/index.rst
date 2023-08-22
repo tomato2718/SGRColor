@@ -45,7 +45,7 @@ Installation
 
 .. code-block:: shell
 
-   >>> pip install sgrcolor-1.0.0-py3-none-any.whl
+   >>> pip install sgrcolor-2.0.0-py3-none-any.whl
 
 
 Usage
@@ -63,15 +63,15 @@ Start Up
       Font,
       FG,
       BG,
-      SGRColor,
+      SGRColor
    )
    print(FG.BLUE, 'foobar', FG.RESET)
-   font1 = SGRColor(
-      font='bold',
-      fg='black',
-      bg='white',
+
+   important = SGRColor(
+      font=('BOLD', 'ITALIC'),
+      fg='YELLOW',
    )
-   print(font1('barfoo'))
+   print(important('Something IMPORTANT.'))
 
 
 Run the tests
