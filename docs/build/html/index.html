@@ -2,14 +2,15 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="sgrcolor" href="modules.html" />
 
-    <!-- Generated with Sphinx 6.1.3 and Furo 2023.05.20 -->
-        <title>sgrcolor 1.0.2 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=e6660623a769aa55fea372102b9bf3151b292993" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <!-- Generated with Sphinx 7.1.1 and Furo 2023.07.26 -->
+        <title>sgrcolor 2.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=362ab14a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
     
     
 
@@ -123,7 +124,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="#"><div class="brand">sgrcolor 1.0.2 documentation</div></a>
+      <a href="#"><div class="brand">sgrcolor 2.0.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +147,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="#">
   
   
-  <span class="sidebar-brand-text">sgrcolor 1.0.2 documentation</span>
+  <span class="sidebar-brand-text">sgrcolor 2.0.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -235,7 +236,7 @@
 <ul class="simple">
 <li><p>Install with Python pip</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt;<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>sgrcolor-1.0.0-py3-none-any.whl
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt;<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>sgrcolor-2.0.0-py3-none-any.whl
 </pre></div>
 </div>
 </section>
@@ -252,15 +253,15 @@
    <span class="n">Font</span><span class="p">,</span>
    <span class="n">FG</span><span class="p">,</span>
    <span class="n">BG</span><span class="p">,</span>
-   <span class="n">SGRColor</span><span class="p">,</span>
+   <span class="n">SGRColor</span>
 <span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">FG</span><span class="o">.</span><span class="n">BLUE</span><span class="p">,</span> <span class="s1">&#39;foobar&#39;</span><span class="p">,</span> <span class="n">FG</span><span class="o">.</span><span class="n">RESET</span><span class="p">)</span>
-<span class="n">font1</span> <span class="o">=</span> <span class="n">SGRColor</span><span class="p">(</span>
-   <span class="n">font</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span>
-   <span class="n">fg</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
-   <span class="n">bg</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>
+
+<span class="n">important</span> <span class="o">=</span> <span class="n">SGRColor</span><span class="p">(</span>
+   <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;BOLD&#39;</span><span class="p">,</span> <span class="s1">&#39;ITALIC&#39;</span><span class="p">),</span>
+   <span class="n">fg</span><span class="o">=</span><span class="s1">&#39;YELLOW&#39;</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">font1</span><span class="p">(</span><span class="s1">&#39;barfoo&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">important</span><span class="p">(</span><span class="s1">&#39;Something IMPORTANT.&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 </section>
@@ -369,11 +370,11 @@
       
     </aside>
   </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/scripts/furo.js"></script>
-    <script src="https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true, theme:'neutral'});</script>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=73cda6fb"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
     </body>
 </html>
