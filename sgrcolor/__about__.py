@@ -13,10 +13,10 @@ __all__ = [
 ]
 
 __project__ = 'sgrcolor'
-__version__ = '2.0.0'
+__version__ = '1.0.2'
 __author__ = 'yveschen2718@gmail.com'
 __maintainer__ = 'yveschen2718@gmail.com'
-__release__ = '2023/08/22'
+__release__ = '2023/07/25'
 __summary__ = 'Color your output with Select Graphic Rendition Code.'
 __usage__ = f'''
 Usage:
@@ -28,9 +28,10 @@ Usage:
             SGRColor
         )
     >>> print(FG.BLUE, 'foobar', FG.RESET)
-    >>> important = SGRColor(
-            font=('BOLD', 'ITALIC'),
-            fg='YELLOW',
+    >>> font1 = SGRColor(
+            font = 'bold',
+            fg = 'black',
+            bg = 'white',
         )
-    >>> print(important('Something IMPORTANT.'))
+    >>> print(font1('barfoo'))
 '''
