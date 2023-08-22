@@ -6,7 +6,7 @@ __all__ = [
     'Font',
     'FG',
     'BG',
-    'Reset',
+    'RESET_ALL',
 ]
 
 from ._meta import SGRMeta
@@ -17,9 +17,9 @@ class Reset(metaclass = SGRMeta):
 
     Attributes:
 
-    - ALL
-    - FG (Also available as FG.RESET)
-    - BG (Also available as BG.RESET)
+        - ALL
+        - FG (Also available as FG.RESET)
+        - BG (Also available as BG.RESET)
     '''
     ALL = '0'
     FG = '39'
@@ -31,13 +31,13 @@ class Font(metaclass = SGRMeta):
 
     Attributes:
 
-    - ``BOLD``
-    - ``DIM``
-    - ``ITALIC``
-    - ``UNDERLINE``
-    - ``STRIKE``
-    - ``NORMAL``
-    - ``DOUBLE_UNDERLINE``
+        - ``BOLD``
+        - ``DIM``
+        - ``ITALIC``
+        - ``UNDERLINE``
+        - ``STRIKE``
+        - ``NORMAL``
+        - ``DOUBLE_UNDERLINE``
     '''
     BOLD = '1'
     DIM = '2'
@@ -53,15 +53,15 @@ class FG(metaclass = SGRMeta):
 
     Attributes:
 
-    - ``RESET``
-    - ``(BRIGHT_)BLACK``
-    - ``(BRIGHT_)RED``
-    - ``(BRIGHT_)GREEN``
-    - ``(BRIGHT_)YELLOW``
-    - ``(BRIGHT_)BLUE``
-    - ``(BRIGHT_)MAGENTA``
-    - ``(BRIGHT_)CYAN``
-    - ``(BRIGHT_)WHITE``
+        - ``RESET``
+        - ``(BRIGHT_)BLACK``
+        - ``(BRIGHT_)RED``
+        - ``(BRIGHT_)GREEN``
+        - ``(BRIGHT_)YELLOW``
+        - ``(BRIGHT_)BLUE``
+        - ``(BRIGHT_)MAGENTA``
+        - ``(BRIGHT_)CYAN``
+        - ``(BRIGHT_)WHITE``
     '''
     RESET = '39'
     BLACK = '30'
@@ -87,15 +87,15 @@ class BG(metaclass = SGRMeta):
 
     Attributes:
     
-    - ``RESET``
-    - ``(BRIGHT_)BLACK``
-    - ``(BRIGHT_)RED``
-    - ``(BRIGHT_)GREEN``
-    - ``(BRIGHT_)YELLOW``
-    - ``(BRIGHT_)BLUE``
-    - ``(BRIGHT_)MAGENTA``
-    - ``(BRIGHT_)CYAN``
-    - ``(BRIGHT_)WHITE``
+        - ``RESET``
+        - ``(BRIGHT_)BLACK``
+        - ``(BRIGHT_)RED``
+        - ``(BRIGHT_)GREEN``
+        - ``(BRIGHT_)YELLOW``
+        - ``(BRIGHT_)BLUE``
+        - ``(BRIGHT_)MAGENTA``
+        - ``(BRIGHT_)CYAN``
+        - ``(BRIGHT_)WHITE``
     '''
     RESET = '49'
     BLACK = '40'
