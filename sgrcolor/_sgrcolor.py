@@ -12,6 +12,10 @@ from ._base import (
     FG,
     BG,
 )
+from .types import (
+    Colors,
+    FontStyles
+)
 
 class SGRColor:
     '''
@@ -20,65 +24,83 @@ class SGRColor:
     Usage::
 
         >>> important = SGRColor(
-                font=('bold', 'italic'),
-                fg='yellow',
+                font=('BOLD', 'ITALIC'),
+                fg='YELLOW',
             )
         >>> print(important('Something IMPORTANT.'))
     '''
-    _prefix: str
+    _format: str
 
-    def __init__(self, font: str|tuple[str] = '', fg: str = '', bg: str = '') -> None:
+    def __init__(self,
+                 font: FontStyles|tuple[FontStyles, ...]|None = None,
+                 fg: Colors|None = None,
+                 bg: Colors|None = None,
+                 ) -> None:
         '''
         Constructor method.
 
-        :param str|tuple[str] font: String or Tuple of the font to use, value MUST be same as the attributes in `Font` class.
-        :param str fg: String of the foreground color to use, value MUST be same as the attribute in `FG` class.
-        :param str bg: String of the background color to use, value MUST be same as the attribute in `BG` class.
-        :raise TypeError: When type of font is not `str` or `tuple`, or type of fg, bg is not `str`.
-        :raise ValueError: When font, fg or bg do not existed.
+        FontStyles:
+        
+        - BOLD
+        - DIM
+        - ITALIC
+        - UNDERLINE
+        - STRIKE
+        - NORMAL
+        - DOUBLE_UNDERLINE
+
+        Colors:
+
+        - BLACK
+        - RED
+        - GREEN
+        - YELLOW
+        - BLUE
+        - MAGENTA
+        - CYAN
+        - WHITE
+        - BRIGHT_BLACK
+        - BRIGHT_RED
+        - BRIGHT_GREEN
+        - BRIGHT_YELLOW
+        - BRIGHT_BLUE
+        - BRIGHT_MAGENTA
+        - BRIGHT_CYAN
+        - BRIGHT_WHITE
+
+        :param FontStyles|tuple[FontStyles, ...]|None font: String or Tuple of the font to use.
+        :param Colors fg: String of the foreground color to use.
+        :param Colors bg: String of the background color to use.
         '''
-        tmp = []
-        if not font:
-            pass
-        elif isinstance(font, str):
-            tmp.append(
-                Font.getvalue(
-                    font.upper()
-                )
+        prefix = []
+        if isinstance(font, str):
+            prefix.append(
+                Font.getvalue(font)
             )
         elif isinstance(font, tuple):
-            for i in font:
-                tmp.append(
-                    Font.getvalue(
-                        i.upper()
-                    )
-                )
-        else:
-            raise TypeError('Type of font MUST be str or tuple.')
-        
-        if not fg:
-            pass
-        elif not isinstance(fg, str):
-            raise TypeError('Type of fg MUST be str.')
-        else:
-            tmp.append(
-                FG.getvalue(
-                    fg.upper()
-                )
+            prefix.extend(
+                [Font.getvalue(i) for i in font]
             )
         
-        if not bg:
-            pass
-        elif not isinstance(bg, str):
-            raise TypeError('Type of bg MUST be str.')
-        else:
-            tmp.append(
-                BG.getvalue(
-                    bg.upper()
-                )
+        if fg:
+            prefix.append(
+                FG.getvalue(fg)
             )
         
-        self._prefix = '\033[' + ';'.join(tmp) + 'm'
+        if bg:
+            prefix.append(
+                BG.getvalue(bg)
+            )
+
+        self._format = ''.join(
+            [
+                '\033[',
+                ';'.join(prefix),
+                'm',
+                '{text}',
+                Reset.ALL,
+            ]
+        )
 
 
     def __call__(self, text: str) -> str:
@@ -88,9 +110,5 @@ class SGRColor:
         :param str text: The text to be colored.
         :return: Colored text.
         :rtype: `str`
-        :raise TypeError: When type of text is not `str`.
         '''
-
-        if not isinstance(text, str):
-            raise TypeError('Type of text MUST be str.')
-        return self._prefix + text + Reset.ALL
+        return self._format.format(text=text)
